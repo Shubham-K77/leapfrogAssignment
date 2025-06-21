@@ -1,0 +1,2023 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+@media (min-width: 1024px) {
+  * {
+    overflow-y: auto;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+i {
+  font-weight: 600;
+  color: #79819a;
+  font-size: 1.15rem;
+}
+
+.personalInfo {
+  width: 100%;
+  background-color: #f5f5f5;
+  overflow-y: auto;
+}
+
+.personalInfo_profilePic {
+  width: 100%;
+  height: 50vh;
+  background-image: url("../assets/avatar/tamaraBellis.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.personalInfo_details {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.personalInfo_details_profession {
+  margin-bottom: 24.24px;
+}
+
+.personalInfo_details_profession_name {
+  font-size: 32.32px;
+  color: black;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.personalInfo_details_profession_position {
+  font-size: 24.24px;
+  color: #516cf7;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.personalInfo_details_quote {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.personalInfo_details_quote_text {
+  width: 75%;
+  margin-bottom: 0.5rem;
+  font-size: 18.18px;
+  color: #47516b;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.personalInfo_details_quote_author {
+  font-size: 12.12px;
+  color: #79819a;
+  font-weight: 400;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.personalInfo_contact {
+  margin: 2rem;
+  height: 42vh;
+  width: 90%;
+  border-top: 3px solid #e2e6ee;
+  border-bottom: 3px solid #e2e6ee;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.personalInfo_contact_emailCard {
+  width: 48%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .personalInfo_contact_emailCard {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_contact_emailCard_motif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-color: #e2e6ee;
+}
+@media (min-width: 1024px) {
+  .personalInfo_contact_emailCard_motif {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_contact_emailCard_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+}
+
+.personalInfo_contact_emailCard_text_value {
+  font-size: 13.13px;
+  color: #47516b;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_contact_websiteCard {
+  width: 48%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .personalInfo_contact_websiteCard {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_contact_websiteCard_motif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-color: #e2e6ee;
+}
+@media (min-width: 1024px) {
+  .personalInfo_contact_websiteCard_motif {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_contact_websiteCard_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+}
+
+.personalInfo_contact_websiteCard_text_value {
+  font-size: 13.13px;
+  color: #47516b;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_contact_phoneCard {
+  width: 48%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .personalInfo_contact_phoneCard {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_contact_phoneCard_motif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-color: #e2e6ee;
+}
+@media (min-width: 1024px) {
+  .personalInfo_contact_phoneCard_motif {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_contact_phoneCard_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+}
+
+.personalInfo_contact_phoneCard_text_value {
+  font-size: 13.13px;
+  color: #47516b;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_contact_addressCard {
+  width: 48%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .personalInfo_contact_addressCard {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_contact_addressCard_motif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-color: #e2e6ee;
+}
+@media (min-width: 1024px) {
+  .personalInfo_contact_addressCard_motif {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_contact_addressCard_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+}
+
+.personalInfo_contact_addressCard_text_value {
+  font-size: 13.13px;
+  color: #47516b;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_socials {
+  margin: 0.5rem;
+  width: 90%;
+  height: 46vh;
+  border-bottom: 3px solid #e2e6ee;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.personalInfo_socials_title {
+  font-size: 12.12px;
+  color: #79819a;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_socials_infoSection {
+  height: 42vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.personalInfo_socials_infoSection_instagramCard {
+  width: 48%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .personalInfo_socials_infoSection_instagramCard {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_socials_infoSection_instagramCard_motif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-color: #fa7e1e;
+}
+@media (min-width: 1024px) {
+  .personalInfo_socials_infoSection_instagramCard_motif {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_socials_infoSection_instagramCard_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+}
+
+.personalInfo_socials_infoSection_instagramCard_text_value {
+  font-size: 14.14px;
+  color: #47516b;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_socials_infoSection_twitterCard {
+  width: 48%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .personalInfo_socials_infoSection_twitterCard {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_socials_infoSection_twitterCard_motif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-color: #1da1f2;
+}
+@media (min-width: 1024px) {
+  .personalInfo_socials_infoSection_twitterCard_motif {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_socials_infoSection_twitterCard_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+}
+
+.personalInfo_socials_infoSection_twitterCard_text_value {
+  font-size: 14.14px;
+  color: #47516b;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_socials_infoSection_dribbleCard {
+  width: 48%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .personalInfo_socials_infoSection_dribbleCard {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_socials_infoSection_dribbleCard_motif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-color: #ea4c89;
+}
+@media (min-width: 1024px) {
+  .personalInfo_socials_infoSection_dribbleCard_motif {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_socials_infoSection_dribbleCard_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+}
+
+.personalInfo_socials_infoSection_dribbleCard_text_value {
+  font-size: 14.14px;
+  color: #47516b;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_socials_infoSection_linkedInCard {
+  width: 48%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .personalInfo_socials_infoSection_linkedInCard {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_socials_infoSection_linkedInCard_motif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-color: #0072b1;
+}
+@media (min-width: 1024px) {
+  .personalInfo_socials_infoSection_linkedInCard_motif {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_socials_infoSection_linkedInCard_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+}
+
+.personalInfo_socials_infoSection_linkedInCard_text_value {
+  font-size: 14.14px;
+  color: #47516b;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_languages {
+  margin: 0.5rem;
+  width: 90%;
+  height: 46vh;
+  border-bottom: 3px solid #e2e6ee;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  border-bottom: none;
+}
+
+.personalInfo_languages_title {
+  font-size: 12.12px;
+  color: #79819a;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_languages_infoSection {
+  height: 42vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.personalInfo_languages_infoSection_italianCard {
+  width: 48%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .personalInfo_languages_infoSection_italianCard {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_languages_infoSection_italianCard_motif {
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-image: url("../assets/flags/italy.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.personalInfo_languages_infoSection_italianCard_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+}
+
+.personalInfo_languages_infoSection_italianCard_text_label {
+  font-size: 14.14px;
+  color: #47516b;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_languages_infoSection_italianCard_text_value {
+  font-size: 12.12px;
+  color: #79819a;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_languages_infoSection_greekCard {
+  width: 48%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .personalInfo_languages_infoSection_greekCard {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_languages_infoSection_greekCard_motif {
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-image: url("../assets/flags/greece.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.personalInfo_languages_infoSection_greekCard_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+}
+
+.personalInfo_languages_infoSection_greekCard_text_label {
+  font-size: 14.14px;
+  color: #47516b;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_languages_infoSection_greekCard_text_value {
+  font-size: 12.12px;
+  color: #79819a;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_languages_infoSection_englishCard {
+  width: 48%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .personalInfo_languages_infoSection_englishCard {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_languages_infoSection_englishCard_motif {
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-image: url("../assets/flags/uk.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.personalInfo_languages_infoSection_englishCard_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+}
+
+.personalInfo_languages_infoSection_englishCard_text_label {
+  font-size: 14.14px;
+  color: #47516b;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_languages_infoSection_englishCard_text_value {
+  font-size: 12.12px;
+  color: #79819a;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_languages_infoSection_spanishCard {
+  width: 48%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .personalInfo_languages_infoSection_spanishCard {
+    overflow-y: auto;
+  }
+}
+
+.personalInfo_languages_infoSection_spanishCard_motif {
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-image: url("../assets/flags/spain.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.personalInfo_languages_infoSection_spanishCard_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+}
+
+.personalInfo_languages_infoSection_spanishCard_text_label {
+  font-size: 14.14px;
+  color: #47516b;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.personalInfo_languages_infoSection_spanishCard_text_value {
+  font-size: 12.12px;
+  color: #79819a;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.projectInfo {
+  margin-top: 2rem;
+  background-color: transparent;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.projectInfo_latestProject {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-y: hidden;
+  padding: 1rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_latestProject {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.projectInfo_latestProject::before {
+  content: "";
+  width: 11%;
+  height: 6vh;
+  background-color: #5531a7;
+  border-radius: 50%;
+  position: absolute;
+  left: 0.85rem;
+  top: 96.1rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_latestProject::before {
+    width: 2%;
+    height: 4vh;
+  }
+}
+@media (min-width: 1024px) {
+  .projectInfo_latestProject::before {
+    content: "";
+    width: 11%;
+    height: 6vh;
+    background-color: #5531a7;
+    border-radius: 50%;
+    position: absolute;
+    left: 26rem;
+    top: 2rem;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  .projectInfo_latestProject::before {
+    width: 2%;
+    height: 4vh;
+  }
+}
+
+.projectInfo_latestProject::after {
+  content: "";
+  width: 2px;
+  height: 80vh;
+  background-color: #e2e6ee;
+  position: absolute;
+  left: 2rem;
+  top: 98.6rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_latestProject::after {
+    content: "";
+    width: 2px;
+    height: 80vh;
+    background-color: #e2e6ee;
+    position: absolute;
+    left: 26.8rem;
+    top: 3.8rem;
+    height: 19.5rem;
+  }
+}
+
+.projectInfo_latestProject_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projectInfo_latestProject_title_text {
+  font-size: 24.24px;
+  color: #2e2e48;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.projectInfo_latestProject_figmaCard {
+  margin-top: 2rem;
+  margin-left: 2.5rem;
+  width: 90%;
+  height: 28vh;
+  border-radius: 4%;
+  background-color: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .projectInfo_latestProject_figmaCard {
+    width: 35%;
+  }
+}
+
+.projectInfo_latestProject_figmaCard_logoTitle {
+  display: flex;
+  width: 95%;
+  height: 20vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.projectInfo_latestProject_figmaCard_logoTitle_mainLogo {
+  width: 15%;
+  height: 9.5vh;
+  background-image: url("../assets/Organizations/figma.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 22%;
+  border-radius: 1rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_latestProject_figmaCard_logoTitle_mainLogo {
+    width: 25.5%;
+    height: 11vh;
+  }
+}
+@media (min-width: 1024px) {
+  .projectInfo_latestProject_figmaCard_logoTitle_mainLogo {
+    width: 21%;
+    border-radius: 0.5rem;
+  }
+}
+
+.projectInfo_latestProject_figmaCard_logoTitle_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0.5rem;
+  width: 70%;
+}
+@media (min-width: 1024px) {
+  .projectInfo_latestProject_figmaCard_logoTitle_desc {
+    width: 65%;
+  }
+}
+
+.projectInfo_latestProject_figmaCard_logoTitle_desc_title {
+  font-size: 16.16px;
+  color: #2e2e48;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.projectInfo_latestProject_figmaCard_logoTitle_desc_context {
+  font-size: 14.14px;
+  color: #79819a;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  text-align: start;
+}
+
+.projectInfo_latestProject_figmaCard_link {
+  font-size: 16.16px;
+  color: #516cf7;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.projectInfo_latestProject_chakraCard {
+  margin-top: 2rem;
+  margin-left: 2.5rem;
+  width: 90%;
+  height: 28vh;
+  border-radius: 4%;
+  background-color: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .projectInfo_latestProject_chakraCard {
+    width: 35%;
+  }
+}
+
+.projectInfo_latestProject_chakraCard_logoTitle {
+  display: flex;
+  width: 95%;
+  height: 20vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.projectInfo_latestProject_chakraCard_logoTitle_mainLogo {
+  width: 15%;
+  height: 9.5vh;
+  background-image: url("../assets/Organizations/chakra.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 22%;
+  border-radius: 1rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_latestProject_chakraCard_logoTitle_mainLogo {
+    width: 25.5%;
+    height: 11vh;
+  }
+}
+@media (min-width: 1024px) {
+  .projectInfo_latestProject_chakraCard_logoTitle_mainLogo {
+    width: 21%;
+    border-radius: 0.5rem;
+  }
+}
+
+.projectInfo_latestProject_chakraCard_logoTitle_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0.5rem;
+  width: 70%;
+  width: 75%;
+  margin-left: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_latestProject_chakraCard_logoTitle_desc {
+    width: 65%;
+  }
+}
+
+.projectInfo_latestProject_chakraCard_logoTitle_desc_title {
+  font-size: 16.16px;
+  color: #2e2e48;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.projectInfo_latestProject_chakraCard_logoTitle_desc_context {
+  font-size: 14.14px;
+  color: #79819a;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  text-align: start;
+}
+
+.projectInfo_latestProject_chakraCard_link {
+  font-size: 16.16px;
+  color: #516cf7;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.projectInfo_experience {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-y: hidden;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_experience {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.projectInfo_experience::before {
+  content: "";
+  width: 11%;
+  height: 6vh;
+  background-color: #5531a7;
+  border-radius: 50%;
+  position: absolute;
+  left: 0.85rem;
+  top: 130.4rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_experience::before {
+    width: 2%;
+    height: 4vh;
+  }
+}
+@media (min-width: 1024px) {
+  .projectInfo_experience::before {
+    content: "";
+    width: 11%;
+    height: 6vh;
+    background-color: #5531a7;
+    border-radius: 50%;
+    position: absolute;
+    left: 26rem;
+    top: 23.5rem;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  .projectInfo_experience::before {
+    width: 2%;
+    height: 4vh;
+  }
+}
+
+.projectInfo_experience::after {
+  content: "";
+  width: 2px;
+  height: 80vh;
+  background-color: #e2e6ee;
+  position: absolute;
+  left: 2rem;
+  top: 132.9rem;
+  height: 85rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_experience::after {
+    content: "";
+    width: 2px;
+    height: 80vh;
+    background-color: #e2e6ee;
+    position: absolute;
+    left: 26.8rem;
+    top: 25.3rem;
+    height: 45rem;
+  }
+}
+
+.projectInfo_experience_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projectInfo_experience_title_text {
+  font-size: 24.24px;
+  color: #2e2e48;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.projectInfo_experience_appleCard {
+  margin-top: 2rem;
+  margin-left: 2.5rem;
+  width: 90%;
+  height: 28vh;
+  border-radius: 4%;
+  background-color: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 43vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  padding: 1rem;
+  background-color: transparent;
+}
+@media (min-width: 1024px) {
+  .projectInfo_experience_appleCard {
+    width: 35%;
+  }
+}
+
+.projectInfo_experience_appleCard_dateLocation {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.projectInfo_experience_appleCard_dateLocation_duration {
+  font-size: 12.12px;
+  color: #47516b;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  margin-right: 1rem;
+}
+
+.projectInfo_experience_appleCard_dateLocation_location {
+  font-size: 12.12px;
+  color: #47516b;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.projectInfo_experience_appleCard_logoDesc {
+  display: flex;
+  width: 95%;
+  height: 20vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.projectInfo_experience_appleCard_logoDesc_mainLogo {
+  width: 15%;
+  height: 9.5vh;
+  background-image: url("../assets/Organizations/apple.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 21%;
+}
+@media (min-width: 1024px) {
+  .projectInfo_experience_appleCard_logoDesc_mainLogo {
+    width: 25.5%;
+    height: 11vh;
+  }
+}
+@media (min-width: 1024px) {
+  .projectInfo_experience_appleCard_logoDesc_mainLogo {
+    width: 20%;
+  }
+}
+
+.projectInfo_experience_appleCard_logoDesc_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0.5rem;
+  width: 70%;
+  width: 75%;
+}
+@media (min-width: 1024px) {
+  .projectInfo_experience_appleCard_logoDesc_desc {
+    width: 65%;
+  }
+}
+
+.projectInfo_experience_appleCard_logoDesc_desc_title {
+  font-size: 12.12px;
+  color: #79819a;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.projectInfo_experience_appleCard_logoDesc_desc_context {
+  font-size: 14.14px;
+  color: #2e2e48;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  text-align: start;
+}
+
+.projectInfo_experience_appleCard_context {
+  font-size: 12.12px;
+  color: #79819a;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 0.5rem;
+  text-align: justify;
+}
+
+.projectInfo_experience_teslaCard_logoDesc_mainLogo {
+  width: 15%;
+  height: 9.5vh;
+  background-image: url("../assets/Organizations/tesla.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20%;
+  height: 7.5vh;
+}
+@media (min-width: 1024px) {
+  .projectInfo_experience_teslaCard_logoDesc_mainLogo {
+    width: 25.5%;
+    height: 11vh;
+  }
+}
+@media (min-width: 1024px) {
+  .projectInfo_experience_teslaCard_logoDesc_mainLogo {
+    width: 22.5%;
+  }
+}
+
+.projectInfo_experience_googleCard_logoDesc_mainLogo {
+  width: 15%;
+  height: 9.5vh;
+  background-image: url("../assets/Organizations/google.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20%;
+  height: 7.5vh;
+}
+@media (min-width: 1024px) {
+  .projectInfo_experience_googleCard_logoDesc_mainLogo {
+    width: 25.5%;
+    height: 11vh;
+  }
+}
+@media (min-width: 1024px) {
+  .projectInfo_experience_googleCard_logoDesc_mainLogo {
+    width: 24%;
+  }
+}
+
+.projectInfo_experience_vectornatorCard_logoDesc_mainLogo {
+  width: 15%;
+  height: 9.5vh;
+  background-image: url("../assets/Organizations/vectornator.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 24%;
+  border-radius: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_experience_vectornatorCard_logoDesc_mainLogo {
+    width: 25.5%;
+    height: 11vh;
+  }
+}
+
+.projectInfo_education {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-y: hidden;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_education {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.projectInfo_education::before {
+  content: "";
+  width: 11%;
+  height: 6vh;
+  background-color: #5531a7;
+  border-radius: 50%;
+  position: absolute;
+  left: 0.85rem;
+  top: 216rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_education::before {
+    width: 2%;
+    height: 4vh;
+  }
+}
+@media (min-width: 1024px) {
+  .projectInfo_education::before {
+    content: "";
+    width: 11%;
+    height: 6vh;
+    background-color: #5531a7;
+    border-radius: 50%;
+    position: absolute;
+    left: 26rem;
+    top: 70.3rem;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  .projectInfo_education::before {
+    width: 2%;
+    height: 4vh;
+  }
+}
+
+.projectInfo_education::after {
+  content: "";
+  width: 2px;
+  height: 80vh;
+  background-color: #e2e6ee;
+  position: absolute;
+  left: 2rem;
+  top: 218.5rem;
+  height: 45rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_education::after {
+    content: "";
+    width: 2px;
+    height: 80vh;
+    background-color: #e2e6ee;
+    position: absolute;
+    left: 26.8rem;
+    top: 72.1rem;
+    height: 34.8rem;
+  }
+}
+
+.projectInfo_education_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projectInfo_education_title_text {
+  font-size: 24.24px;
+  color: #2e2e48;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.projectInfo_education_memoriselyCard {
+  margin-top: 2rem;
+  margin-left: 2.5rem;
+  width: 90%;
+  height: 28vh;
+  border-radius: 4%;
+  background-color: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  padding: 0.75rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_education_memoriselyCard {
+    width: 35%;
+  }
+}
+
+.projectInfo_education_memoriselyCard_logoTitle {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.projectInfo_education_memoriselyCard_logoTitle_mainLogo {
+  width: 15%;
+  height: 9.5vh;
+  background-image: url("../assets/Organizations/memorisely.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20%;
+  height: 7.5vh;
+  margin-right: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_education_memoriselyCard_logoTitle_mainLogo {
+    width: 25.5%;
+    height: 11vh;
+  }
+}
+
+.projectInfo_education_memoriselyCard_logoTitle_title {
+  font-size: 14.14px;
+  color: #2e2e48;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.projectInfo_education_memoriselyCard_courseName {
+  font-size: 14.14px;
+  color: #2e2e48;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.projectInfo_education_memoriselyCard_courseDate {
+  font-size: 12.12px;
+  color: #79819a;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.projectInfo_education_uxacademyCard_logoTitle_mainLogo {
+  width: 15%;
+  height: 9.5vh;
+  background-image: url("../assets/Organizations/uxacademy.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20%;
+  height: 7.5vh;
+  border-radius: 0.25rem;
+  margin-right: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_education_uxacademyCard_logoTitle_mainLogo {
+    width: 25.5%;
+    height: 11vh;
+  }
+}
+
+.projectInfo_education_courseraCard_logoTitle_mainLogo {
+  width: 15%;
+  height: 9.5vh;
+  background-image: url("../assets/Organizations/coursera.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20%;
+  height: 7.5vh;
+  margin-right: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_education_courseraCard_logoTitle_mainLogo {
+    width: 25.5%;
+    height: 11vh;
+  }
+}
+
+.projectInfo_skills {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-y: hidden;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.projectInfo_skills::before {
+  content: "";
+  width: 11%;
+  height: 6vh;
+  background-color: #5531a7;
+  border-radius: 50%;
+  position: absolute;
+  left: 0.85rem;
+  top: 263rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_skills::before {
+    width: 2%;
+    height: 4vh;
+  }
+}
+@media (min-width: 1024px) {
+  .projectInfo_skills::before {
+    content: "";
+    width: 11%;
+    height: 6vh;
+    background-color: #5531a7;
+    border-radius: 50%;
+    position: absolute;
+    left: 26rem;
+    top: 106rem;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  .projectInfo_skills::before {
+    width: 2%;
+    height: 4vh;
+  }
+}
+
+.projectInfo_skills::after {
+  content: "";
+  width: 2px;
+  height: 80vh;
+  background-color: #e2e6ee;
+  position: absolute;
+  left: 2rem;
+  top: 265.5rem;
+  height: 58rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_skills::after {
+    content: "";
+    width: 2px;
+    height: 80vh;
+    background-color: #e2e6ee;
+    position: absolute;
+    left: 26.8rem;
+    top: 107.8rem;
+    height: 58rem;
+  }
+}
+
+.projectInfo_skills_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projectInfo_skills_title_text {
+  font-size: 24.24px;
+  color: #2e2e48;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.projectInfo_skills_designCard {
+  width: 95%;
+  height: auto;
+  margin-left: 2rem;
+  background-color: transparent;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_skills_designCard {
+    width: 80%;
+  }
+}
+
+.projectInfo_skills_designCard_icon {
+  width: 30%;
+  height: 25vh;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .projectInfo_skills_designCard_icon {
+    width: 12%;
+  }
+}
+
+.projectInfo_skills_designCard_icon_motiff {
+  height: 7.25vh;
+  width: 55%;
+  border-radius: 50%;
+  background-color: #efe2f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectInfo_skills_designCard_icon_title {
+  margin-top: 1rem;
+  font-size: 16.16px;
+  color: #2e2e48;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.projectInfo_skills_designCard_tags {
+  width: 65%;
+  height: 55vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  background-color: transparent;
+}
+
+.projectInfo_skills_designCard_tags_designing_card {
+  width: 45%;
+  height: 6vh;
+  border-radius: 0.25rem;
+  background-color: #f3e8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14.14px;
+  color: #9251f7;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.projectInfo_skills_developmentCard_tags_designing_card {
+  width: 45%;
+  height: 6vh;
+  border-radius: 0.25rem;
+  background-color: #f1f4ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14.14px;
+  color: #516cf7;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.projectInfo_skills_developmentCard_icon_title {
+  margin-top: 1rem;
+  font-size: 14.14px;
+  color: #2e2e48;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  text-align: start;
+}
+@media (min-width: 1024px) {
+  .projectInfo_skills_developmentCard_icon_title {
+    font-size: 16.16px;
+    color: #2e2e48;
+    font-weight: 500;
+    text-align: center;
+    font-family: "DM Sans", sans-serif;
+  }
+}
+
+.projectInfo_tools {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-y: hidden;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.projectInfo_tools::before {
+  content: "";
+  width: 11%;
+  height: 6vh;
+  background-color: #5531a7;
+  border-radius: 50%;
+  position: absolute;
+  left: 0.85rem;
+  top: 321rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools::before {
+    width: 2%;
+    height: 4vh;
+  }
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools::before {
+    content: "";
+    width: 11%;
+    height: 6vh;
+    background-color: #5531a7;
+    border-radius: 50%;
+    position: absolute;
+    left: 26rem;
+    top: 165.8rem;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  .projectInfo_tools::before {
+    width: 2%;
+    height: 4vh;
+  }
+}
+
+.projectInfo_tools_card {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools_card {
+    width: 80%;
+  }
+}
+
+.projectInfo_tools_card_figma {
+  width: 45%;
+  height: 22vh;
+  border-radius: 0.25rem;
+  background-color: #f7f9fc;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools_card_figma {
+    width: 26%;
+    height: 28vh;
+  }
+}
+
+.projectInfo_tools_card_figma_mainLogo {
+  width: 28%;
+  height: 9vh;
+  background-image: url("../assets/Organizations/figma.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40%;
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools_card_figma_mainLogo {
+    width: 30%;
+  }
+}
+
+.projectInfo_tools_card_figma_title {
+  font-size: 14.14px;
+  color: #2e2e48;
+  font-weight: 500;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.projectInfo_tools_card_figma_desc {
+  font-size: 10.1px;
+  color: #79819a;
+  font-weight: 400;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.projectInfo_tools_card_figma_mazeLogo {
+  width: 28%;
+  height: 9vh;
+  background-image: url("../assets/Organizations/maze.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 55%;
+  height: 6vh;
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools_card_figma_mazeLogo {
+    width: 42%;
+    height: 6.5vh;
+  }
+}
+
+.projectInfo_tools_card_figma_splineLogo {
+  width: 28%;
+  height: 9vh;
+  background-image: url("../assets/Organizations/spline.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30%;
+  height: 6.5vh;
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools_card_figma_splineLogo {
+    width: 32%;
+    height: 9.5vh;
+  }
+}
+
+.projectInfo_tools_card_figma_vectornatorLogo {
+  width: 28%;
+  height: 9vh;
+  background-image: url("../assets/Organizations/vectornator.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40%;
+  border-radius: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools_card_figma_vectornatorLogo {
+    width: 30%;
+  }
+}
+
+.projectInfo_tools_card_figma_rotatoLogo {
+  width: 28%;
+  height: 9vh;
+  background-image: url("../assets/Organizations/rotato.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 41%;
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools_card_figma_rotatoLogo {
+    width: 31.9%;
+    height: 9.78vh;
+  }
+}
+
+.projectInfo_tools_card_figma_zeplinLogo {
+  width: 28%;
+  height: 9vh;
+  background-image: url("../assets/Organizations/zeplin.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 52%;
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools_card_figma_zeplinLogo {
+    width: 38%;
+  }
+}
+
+.projectInfo_tools_card_figma_vsCodeLogo {
+  width: 28%;
+  height: 9vh;
+  background-image: url("../assets/Organizations/vscode.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50%;
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools_card_figma_vsCodeLogo {
+    width: 30%;
+  }
+}
+
+.projectInfo_tools_card_figma_xcodeLogo {
+  width: 28%;
+  height: 9vh;
+  background-image: url("../assets/Organizations/xoce.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50%;
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools_card_figma_xcodeLogo {
+    width: 30%;
+  }
+}
+
+.projectInfo_tools_card_figma_notionLogo {
+  width: 28%;
+  height: 9vh;
+  background-image: url("../assets/Organizations/Notion.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 34%;
+  height: 35%;
+}
+@media (min-width: 1024px) {
+  .projectInfo_tools_card_figma_notionLogo {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+  }
+  .personalInfo {
+    width: 35%;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+  }
+  .personalInfo_profilePic {
+    overflow-y: auto;
+  }
+  .personalInfo_details {
+    overflow-y: auto;
+  }
+  .personalInfo_details_profession {
+    overflow-y: auto;
+  }
+  .personalInfo_details_profession_name {
+    overflow-y: auto;
+  }
+  .personalInfo_details_profession_position {
+    overflow-y: auto;
+  }
+  .personalInfo_details_quote {
+    overflow-y: auto;
+  }
+  .personalInfo_details_quote_text {
+    overflow-y: auto;
+  }
+  .personalInfo_details_quote_author {
+    overflow-y: auto;
+  }
+  .personalInfo_contact {
+    overflow-y: auto;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,1141 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+// Variables
+$boxColor: #f5f5f5;
+$lineColor: #e2e6ee;
+
+// Mixins
+
+@mixin textStyle($fontSize, $fontColor, $fontWeight) {
+  font-size: $fontSize;
+  color: $fontColor;
+  font-weight: $fontWeight;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+@mixin personalInfoTextStyle($fontSize, $fontColor, $fontWeight) {
+  font-size: $fontSize;
+  color: $fontColor;
+  font-weight: $fontWeight;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+@mixin personalInfoSectionStyle {
+  margin: 2rem;
+  height: 42vh;
+  width: 90%;
+  border-top: 3px solid $lineColor;
+  border-bottom: 3px solid $lineColor;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin personalInfoSectionSecondStyleMain {
+  margin: 0.5rem;
+  width: 90%;
+  height: 46vh;
+  border-bottom: 3px solid $lineColor;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+@mixin personalInfoSectionSecondStyleSecondary {
+  height: 42vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin personalInfoSectionCardStyle {
+  width: 48%;
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+  @media (min-width: 1024px) {
+    overflow-y: auto;
+  }
+}
+
+@mixin personalInfoSectionMotifStyle($bgColor) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-color: $bgColor;
+  @media (min-width: 1024px) {
+    overflow-y: auto;
+  }
+}
+
+@mixin personalInfoSectionSecondMotifStyle($bgImage) {
+  width: 30%;
+  height: 7vh;
+  border-radius: 50%;
+  background-image: url($bgImage);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin personalInfoSectionTextStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+  width: 100%;
+}
+
+@mixin projectCardStyle {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-y: hidden;
+  padding: 1rem;
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@mixin projectCardStyleBefore($top, $left) {
+  content: "";
+  width: 11%;
+  height: 6vh;
+  background-color: #5531a7;
+  border-radius: 50%;
+  position: absolute;
+  left: $left;
+  top: $top;
+  @media (min-width: 1024px) {
+    width: 2%;
+    height: 4vh;
+  }
+}
+
+@mixin projectCardStyleAfter($top, $left) {
+  content: "";
+  width: 2px;
+  height: 80vh;
+  background-color: #e2e6ee;
+  position: absolute;
+  left: $left;
+  top: $top;
+}
+
+@mixin projectIndividualCard {
+  margin-top: 2rem;
+  margin-left: 2.5rem;
+  width: 90%;
+  height: 28vh;
+  border-radius: 4%;
+  background-color: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  @media (min-width: 1024px) {
+    width: 35%;
+  }
+}
+
+@mixin projectIndividualCard_logoWithTitle {
+  display: flex;
+  width: 95%;
+  height: 20vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin projectIndividualCard_logoWithTitle_logo($imgUrl) {
+  width: 15%;
+  height: 9.5vh;
+  background-image: url($imgUrl);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (min-width: 1024px) {
+    width: 25.5%;
+    height: 11vh;
+  }
+}
+
+@mixin projectIndividualCard_logoWithTitle_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0.5rem;
+  width: 70%;
+  @media (min-width: 1024px) {
+    width: 65%;
+  }
+}
+
+@mixin projectToolsCardLogo($imageUrl) {
+  width: 28%;
+  height: 9vh;
+  background-image: url($imageUrl);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  @media (min-width: 1024px) {
+    overflow-y: auto;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+i {
+  font-weight: 600;
+  color: #79819a;
+  font-size: 1.15rem;
+}
+
+.personalInfo {
+  width: 100%;
+  background-color: $boxColor;
+  overflow-y: auto;
+}
+
+.personalInfo_profilePic {
+  width: 100%;
+  height: 50vh;
+  background-image: url("../assets/avatar/tamaraBellis.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.personalInfo_details {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.personalInfo_details_profession {
+  margin-bottom: 24.24px;
+}
+
+.personalInfo_details_profession_name {
+  @include textStyle(32.32px, black, 500);
+}
+
+.personalInfo_details_profession_position {
+  @include textStyle(24.24px, #516cf7, 500);
+}
+
+.personalInfo_details_quote {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.personalInfo_details_quote_text {
+  width: 75%;
+  margin-bottom: 0.5rem;
+  @include textStyle(18.18px, #47516b, 500);
+}
+
+.personalInfo_details_quote_author {
+  @include textStyle(12.12px, #79819a, 400);
+}
+
+.personalInfo_contact {
+  @include personalInfoSectionStyle;
+}
+
+.personalInfo_contact_emailCard {
+  @include personalInfoSectionCardStyle;
+}
+
+.personalInfo_contact_emailCard_motif {
+  @include personalInfoSectionMotifStyle($lineColor);
+}
+
+.personalInfo_contact_emailCard_text {
+  @include personalInfoSectionTextStyle;
+}
+
+.personalInfo_contact_emailCard_text_value {
+  @include personalInfoTextStyle(13.13px, #47516b, 500);
+}
+
+.personalInfo_contact_websiteCard {
+  @include personalInfoSectionCardStyle;
+}
+
+.personalInfo_contact_websiteCard_motif {
+  @include personalInfoSectionMotifStyle($lineColor);
+}
+
+.personalInfo_contact_websiteCard_text {
+  @include personalInfoSectionTextStyle;
+}
+
+.personalInfo_contact_websiteCard_text_value {
+  @include personalInfoTextStyle(13.13px, #47516b, 500);
+}
+
+.personalInfo_contact_phoneCard {
+  @include personalInfoSectionCardStyle;
+}
+
+.personalInfo_contact_phoneCard_motif {
+  @include personalInfoSectionMotifStyle($lineColor);
+}
+
+.personalInfo_contact_phoneCard_text {
+  @include personalInfoSectionTextStyle;
+}
+
+.personalInfo_contact_phoneCard_text_value {
+  @include personalInfoTextStyle(13.13px, #47516b, 500);
+}
+
+.personalInfo_contact_addressCard {
+  @include personalInfoSectionCardStyle;
+}
+
+.personalInfo_contact_addressCard_motif {
+  @include personalInfoSectionMotifStyle($lineColor);
+}
+
+.personalInfo_contact_addressCard_text {
+  @include personalInfoSectionTextStyle;
+}
+
+.personalInfo_contact_addressCard_text_value {
+  @include personalInfoTextStyle(13.13px, #47516b, 500);
+}
+
+.personalInfo_socials {
+  @include personalInfoSectionSecondStyleMain;
+}
+
+.personalInfo_socials_title {
+  @include personalInfoTextStyle(12.12px, #79819a, 400);
+}
+
+.personalInfo_socials_infoSection {
+  @include personalInfoSectionSecondStyleSecondary;
+}
+
+.personalInfo_socials_infoSection_instagramCard {
+  @include personalInfoSectionCardStyle;
+}
+
+.personalInfo_socials_infoSection_instagramCard_motif {
+  @include personalInfoSectionMotifStyle(#fa7e1e);
+}
+
+.personalInfo_socials_infoSection_instagramCard_text {
+  @include personalInfoSectionTextStyle;
+}
+
+.personalInfo_socials_infoSection_instagramCard_text_value {
+  @include personalInfoTextStyle(14.14px, #47516b, 500);
+}
+
+.personalInfo_socials_infoSection_twitterCard {
+  @include personalInfoSectionCardStyle;
+}
+
+.personalInfo_socials_infoSection_twitterCard_motif {
+  @include personalInfoSectionMotifStyle(#1da1f2);
+}
+
+.personalInfo_socials_infoSection_twitterCard_text {
+  @include personalInfoSectionTextStyle;
+}
+
+.personalInfo_socials_infoSection_twitterCard_text_value {
+  @include personalInfoTextStyle(14.14px, #47516b, 500);
+}
+
+.personalInfo_socials_infoSection_dribbleCard {
+  @include personalInfoSectionCardStyle;
+}
+
+.personalInfo_socials_infoSection_dribbleCard_motif {
+  @include personalInfoSectionMotifStyle(#ea4c89);
+}
+
+.personalInfo_socials_infoSection_dribbleCard_text {
+  @include personalInfoSectionTextStyle;
+}
+
+.personalInfo_socials_infoSection_dribbleCard_text_value {
+  @include personalInfoTextStyle(14.14px, #47516b, 500);
+}
+
+.personalInfo_socials_infoSection_linkedInCard {
+  @include personalInfoSectionCardStyle;
+}
+
+.personalInfo_socials_infoSection_linkedInCard_motif {
+  @include personalInfoSectionMotifStyle(#0072b1);
+}
+
+.personalInfo_socials_infoSection_linkedInCard_text {
+  @include personalInfoSectionTextStyle;
+}
+
+.personalInfo_socials_infoSection_linkedInCard_text_value {
+  @include personalInfoTextStyle(14.14px, #47516b, 500);
+}
+
+.personalInfo_languages {
+  @include personalInfoSectionSecondStyleMain;
+  border-bottom: none;
+}
+
+.personalInfo_languages_title {
+  @include personalInfoTextStyle(12.12px, #79819a, 400);
+}
+
+.personalInfo_languages_infoSection {
+  @include personalInfoSectionSecondStyleSecondary;
+}
+
+.personalInfo_languages_infoSection_italianCard {
+  @include personalInfoSectionCardStyle;
+}
+
+.personalInfo_languages_infoSection_italianCard_motif {
+  @include personalInfoSectionSecondMotifStyle("../assets/flags/italy.webp");
+}
+
+.personalInfo_languages_infoSection_italianCard_text {
+  @include personalInfoSectionTextStyle;
+}
+
+.personalInfo_languages_infoSection_italianCard_text_label {
+  @include personalInfoTextStyle(14.14px, #47516b, 500);
+}
+
+.personalInfo_languages_infoSection_italianCard_text_value {
+  @include personalInfoTextStyle(12.12px, #79819a, 400);
+}
+
+.personalInfo_languages_infoSection_greekCard {
+  @include personalInfoSectionCardStyle;
+}
+
+.personalInfo_languages_infoSection_greekCard_motif {
+  @include personalInfoSectionSecondMotifStyle("../assets/flags/greece.webp");
+}
+
+.personalInfo_languages_infoSection_greekCard_text {
+  @include personalInfoSectionTextStyle;
+}
+
+.personalInfo_languages_infoSection_greekCard_text_label {
+  @include personalInfoTextStyle(14.14px, #47516b, 500);
+}
+
+.personalInfo_languages_infoSection_greekCard_text_value {
+  @include personalInfoTextStyle(12.12px, #79819a, 400);
+}
+
+.personalInfo_languages_infoSection_englishCard {
+  @include personalInfoSectionCardStyle;
+}
+
+.personalInfo_languages_infoSection_englishCard_motif {
+  @include personalInfoSectionSecondMotifStyle("../assets/flags/uk.webp");
+}
+
+.personalInfo_languages_infoSection_englishCard_text {
+  @include personalInfoSectionTextStyle;
+}
+
+.personalInfo_languages_infoSection_englishCard_text_label {
+  @include personalInfoTextStyle(14.14px, #47516b, 500);
+}
+
+.personalInfo_languages_infoSection_englishCard_text_value {
+  @include personalInfoTextStyle(12.12px, #79819a, 400);
+}
+
+.personalInfo_languages_infoSection_spanishCard {
+  @include personalInfoSectionCardStyle;
+}
+
+.personalInfo_languages_infoSection_spanishCard_motif {
+  @include personalInfoSectionSecondMotifStyle("../assets/flags/spain.webp");
+}
+
+.personalInfo_languages_infoSection_spanishCard_text {
+  @include personalInfoSectionTextStyle;
+}
+
+.personalInfo_languages_infoSection_spanishCard_text_label {
+  @include personalInfoTextStyle(14.14px, #47516b, 500);
+}
+
+.personalInfo_languages_infoSection_spanishCard_text_value {
+  @include personalInfoTextStyle(12.12px, #79819a, 400);
+}
+
+.projectInfo {
+  margin-top: 2rem;
+  background-color: transparent;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.projectInfo_latestProject {
+  @include projectCardStyle();
+}
+
+.projectInfo_latestProject::before {
+  @include projectCardStyleBefore(96.1rem, 0.85rem);
+  @media (min-width: 1024px) {
+    @include projectCardStyleBefore(2rem, 26rem);
+  }
+}
+
+.projectInfo_latestProject::after {
+  @include projectCardStyleAfter(98.6rem, 2rem);
+  @media (min-width: 1024px) {
+    @include projectCardStyleAfter(3.8rem, 26.8rem);
+    height: 19.5rem;
+  }
+}
+
+.projectInfo_latestProject_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projectInfo_latestProject_title_text {
+  @include textStyle(24.24px, #2e2e48, 500);
+}
+
+.projectInfo_latestProject_figmaCard {
+  @include projectIndividualCard();
+}
+
+.projectInfo_latestProject_figmaCard_logoTitle {
+  @include projectIndividualCard_logoWithTitle();
+}
+
+.projectInfo_latestProject_figmaCard_logoTitle_mainLogo {
+  @include projectIndividualCard_logoWithTitle_logo(
+    "../assets/Organizations/figma.png"
+  );
+  width: 22%;
+  border-radius: 1rem;
+  @media (min-width: 1024px) {
+    width: 21%;
+    border-radius: 0.5rem;
+  }
+}
+
+.projectInfo_latestProject_figmaCard_logoTitle_desc {
+  @include projectIndividualCard_logoWithTitle_desc();
+}
+
+.projectInfo_latestProject_figmaCard_logoTitle_desc_title {
+  @include personalInfoTextStyle(16.16px, #2e2e48, 500);
+  margin-bottom: 0.5rem;
+}
+
+.projectInfo_latestProject_figmaCard_logoTitle_desc_context {
+  @include personalInfoTextStyle(14.14px, #79819a, 400);
+  text-align: start;
+}
+
+.projectInfo_latestProject_figmaCard_link {
+  @include personalInfoTextStyle(16.16px, #516cf7, 500);
+  margin-bottom: 0.5rem;
+}
+
+.projectInfo_latestProject_chakraCard {
+  @include projectIndividualCard();
+}
+
+.projectInfo_latestProject_chakraCard_logoTitle {
+  @include projectIndividualCard_logoWithTitle();
+}
+
+.projectInfo_latestProject_chakraCard_logoTitle_mainLogo {
+  @include projectIndividualCard_logoWithTitle_logo(
+    "../assets/Organizations/chakra.jpg"
+  );
+  width: 22%;
+  border-radius: 1rem;
+  @media (min-width: 1024px) {
+    width: 21%;
+    border-radius: 0.5rem;
+  }
+}
+
+.projectInfo_latestProject_chakraCard_logoTitle_desc {
+  @include projectIndividualCard_logoWithTitle_desc();
+  width: 75%;
+  margin-left: 0.5rem;
+}
+
+.projectInfo_latestProject_chakraCard_logoTitle_desc_title {
+  @include personalInfoTextStyle(16.16px, #2e2e48, 500);
+  margin-bottom: 0.5rem;
+}
+
+.projectInfo_latestProject_chakraCard_logoTitle_desc_context {
+  @include personalInfoTextStyle(14.14px, #79819a, 400);
+  text-align: start;
+}
+
+.projectInfo_latestProject_chakraCard_link {
+  @include personalInfoTextStyle(16.16px, #516cf7, 500);
+  margin-bottom: 0.5rem;
+}
+
+.projectInfo_experience {
+  @include projectCardStyle();
+  margin-top: 2rem;
+}
+
+.projectInfo_experience::before {
+  @include projectCardStyleBefore(130.4rem, 0.85rem);
+  @media (min-width: 1024px) {
+    @include projectCardStyleBefore(23.5rem, 26rem);
+  }
+}
+
+.projectInfo_experience::after {
+  @include projectCardStyleAfter(132.9rem, 2rem);
+  height: 85rem;
+  @media (min-width: 1024px) {
+    @include projectCardStyleAfter(25.3rem, 26.8rem);
+    height: 45rem;
+  }
+}
+
+.projectInfo_experience_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projectInfo_experience_title_text {
+  @include textStyle(24.24px, #2e2e48, 500);
+}
+
+.projectInfo_experience_appleCard {
+  @include projectIndividualCard();
+  height: 43vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  padding: 1rem;
+  background-color: transparent;
+}
+
+.projectInfo_experience_appleCard_dateLocation {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.projectInfo_experience_appleCard_dateLocation_duration {
+  @include personalInfoTextStyle(12.12px, #47516b, 400);
+  margin-right: 1rem;
+}
+
+.projectInfo_experience_appleCard_dateLocation_location {
+  @include personalInfoTextStyle(12.12px, #47516b, 400);
+}
+
+.projectInfo_experience_appleCard_logoDesc {
+  @include projectIndividualCard_logoWithTitle();
+}
+
+.projectInfo_experience_appleCard_logoDesc_mainLogo {
+  @include projectIndividualCard_logoWithTitle_logo(
+    "../assets/Organizations/apple.png"
+  );
+  width: 21%;
+  @media (min-width: 1024px) {
+    width: 20%;
+  }
+}
+
+.projectInfo_experience_appleCard_logoDesc_desc {
+  @include projectIndividualCard_logoWithTitle_desc();
+  width: 75%;
+}
+
+.projectInfo_experience_appleCard_logoDesc_desc_title {
+  @include personalInfoTextStyle(12.12px, #79819a, 400);
+  margin-bottom: 0.5rem;
+}
+
+.projectInfo_experience_appleCard_logoDesc_desc_context {
+  @include personalInfoTextStyle(14.14px, #2e2e48, 500);
+  text-align: start;
+}
+
+.projectInfo_experience_appleCard_context {
+  @include personalInfoTextStyle(12.12px, #79819a, 400);
+  margin-bottom: 0.5rem;
+  text-align: justify;
+}
+
+.projectInfo_experience_teslaCard_logoDesc_mainLogo {
+  @include projectIndividualCard_logoWithTitle_logo(
+    "../assets/Organizations/tesla.png"
+  );
+  width: 20%;
+  height: 7.5vh;
+  @media (min-width: 1024px) {
+    width: 22.5%;
+  }
+}
+
+.projectInfo_experience_googleCard_logoDesc_mainLogo {
+  @include projectIndividualCard_logoWithTitle_logo(
+    "../assets/Organizations/google.png"
+  );
+  width: 20%;
+  height: 7.5vh;
+  @media (min-width: 1024px) {
+    width: 24%;
+  }
+}
+
+.projectInfo_experience_vectornatorCard_logoDesc_mainLogo {
+  @include projectIndividualCard_logoWithTitle_logo(
+    "../assets/Organizations/vectornator.jpeg"
+  );
+  width: 24%;
+  border-radius: 0.5rem;
+}
+
+.projectInfo_education {
+  @include projectCardStyle();
+  margin-top: 2rem;
+}
+
+.projectInfo_education::before {
+  @include projectCardStyleBefore(216rem, 0.85rem);
+  @media (min-width: 1024px) {
+    @include projectCardStyleBefore(70.3rem, 26rem);
+  }
+}
+
+.projectInfo_education::after {
+  @include projectCardStyleAfter(218.5rem, 2rem);
+  height: 45rem;
+  @media (min-width: 1024px) {
+    @include projectCardStyleAfter(72.1rem, 26.8rem);
+    height: 34.8rem;
+  }
+}
+
+.projectInfo_education_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projectInfo_education_title_text {
+  @include textStyle(24.24px, #2e2e48, 500);
+}
+
+.projectInfo_education_memoriselyCard {
+  @include projectIndividualCard();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  padding: 0.75rem;
+}
+
+.projectInfo_education_memoriselyCard_logoTitle {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.projectInfo_education_memoriselyCard_logoTitle_mainLogo {
+  @include projectIndividualCard_logoWithTitle_logo(
+    "../assets/Organizations/memorisely.png"
+  );
+  width: 20%;
+  height: 7.5vh;
+  margin-right: 1.5rem;
+}
+
+.projectInfo_education_memoriselyCard_logoTitle_title {
+  @include personalInfoTextStyle(14.14px, #2e2e48, 500);
+}
+
+.projectInfo_education_memoriselyCard_courseName {
+  @include personalInfoTextStyle(14.14px, #2e2e48, 500);
+}
+
+.projectInfo_education_memoriselyCard_courseDate {
+  @include personalInfoTextStyle(12.12px, #79819a, 400);
+}
+
+.projectInfo_education_uxacademyCard_logoTitle_mainLogo {
+  @include projectIndividualCard_logoWithTitle_logo(
+    "../assets/Organizations/uxacademy.png"
+  );
+  width: 20%;
+  height: 7.5vh;
+  border-radius: 0.25rem;
+  margin-right: 1.5rem;
+}
+
+.projectInfo_education_courseraCard_logoTitle_mainLogo {
+  @include projectIndividualCard_logoWithTitle_logo(
+    "../assets/Organizations/coursera.png"
+  );
+  width: 20%;
+  height: 7.5vh;
+  margin-right: 1.5rem;
+}
+
+.projectInfo_skills {
+  @include projectCardStyle();
+  margin-top: 2rem;
+}
+
+.projectInfo_skills::before {
+  @include projectCardStyleBefore(263rem, 0.85rem);
+  @media (min-width: 1024px) {
+    @include projectCardStyleBefore(106rem, 26rem);
+  }
+}
+
+.projectInfo_skills::after {
+  @include projectCardStyleAfter(265.5rem, 2rem);
+  height: 58rem;
+  @media (min-width: 1024px) {
+    @include projectCardStyleAfter(107.8rem, 26.8rem);
+    height: 58rem;
+  }
+}
+
+.projectInfo_skills_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projectInfo_skills_title_text {
+  @include textStyle(24.24px, #2e2e48, 500);
+}
+
+.projectInfo_skills_designCard {
+  width: 95%;
+  height: auto;
+  margin-left: 2rem;
+  background-color: transparent;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  @media (min-width: 1024px) {
+    width: 80%;
+  }
+}
+
+.projectInfo_skills_designCard_icon {
+  width: 30%;
+  height: 25vh;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 1024px) {
+    width: 12%;
+  }
+}
+
+.projectInfo_skills_designCard_icon_motiff {
+  height: 7.25vh;
+  width: 55%;
+  border-radius: 50%;
+  background-color: #efe2f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectInfo_skills_designCard_icon_title {
+  margin-top: 1rem;
+  @include personalInfoTextStyle(16.16px, #2e2e48, 500);
+}
+
+.projectInfo_skills_designCard_tags {
+  width: 65%;
+  height: 55vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  background-color: transparent;
+}
+
+.projectInfo_skills_designCard_tags_designing_card {
+  width: 45%;
+  height: 6vh;
+  border-radius: 0.25rem;
+  background-color: #f3e8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include personalInfoTextStyle(14.14px, #9251f7, 500);
+  margin-bottom: 1rem;
+}
+
+.projectInfo_skills_developmentCard_tags_designing_card {
+  width: 45%;
+  height: 6vh;
+  border-radius: 0.25rem;
+  background-color: #f1f4ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include personalInfoTextStyle(14.14px, #516cf7, 500);
+  margin-bottom: 1rem;
+}
+
+.projectInfo_skills_developmentCard_icon_title {
+  margin-top: 1rem;
+  @include personalInfoTextStyle(14.14px, #2e2e48, 500);
+  @media (min-width: 1024px) {
+    @include personalInfoTextStyle(16.16px, #2e2e48, 500);
+  }
+  text-align: start;
+}
+
+.projectInfo_tools {
+  @include projectCardStyle();
+  margin-top: 2rem;
+}
+
+.projectInfo_tools::before {
+  @include projectCardStyleBefore(321rem, 0.85rem);
+  @media (min-width: 1024px) {
+    @include projectCardStyleBefore(165.8rem, 26rem);
+  }
+}
+
+.projectInfo_tools_card {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  @media (min-width: 1024px) {
+    width: 80%;
+  }
+}
+
+.projectInfo_tools_card_figma {
+  width: 45%;
+  height: 22vh;
+  border-radius: 0.25rem;
+  background-color: #f7f9fc;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  @media (min-width: 1024px) {
+    width: 26%;
+    height: 28vh;
+  }
+}
+
+.projectInfo_tools_card_figma_mainLogo {
+  @include projectToolsCardLogo("../assets/Organizations/figma.png");
+  width: 40%;
+  @media (min-width: 1024px) {
+    width: 30%;
+  }
+}
+
+.projectInfo_tools_card_figma_title {
+  @include personalInfoTextStyle(14.14px, #2e2e48, 500);
+}
+
+.projectInfo_tools_card_figma_desc {
+  @include personalInfoTextStyle(10.1px, #79819a, 400);
+}
+
+.projectInfo_tools_card_figma_mazeLogo {
+  @include projectToolsCardLogo("../assets/Organizations/maze.png");
+  width: 55%;
+  height: 6vh;
+  @media (min-width: 1024px) {
+    width: 42%;
+    height: 6.5vh;
+  }
+}
+
+.projectInfo_tools_card_figma_splineLogo {
+  @include projectToolsCardLogo("../assets/Organizations/spline.png");
+  width: 30%;
+  height: 6.5vh;
+  @media (min-width: 1024px) {
+    width: 32%;
+    height: 9.5vh;
+  }
+}
+
+.projectInfo_tools_card_figma_vectornatorLogo {
+  @include projectToolsCardLogo("../assets/Organizations/vectornator.jpeg");
+  width: 40%;
+  border-radius: 0.5rem;
+  @media (min-width: 1024px) {
+    width: 30%;
+  }
+}
+
+.projectInfo_tools_card_figma_rotatoLogo {
+  @include projectToolsCardLogo("../assets/Organizations/rotato.png");
+  width: 41%;
+  @media (min-width: 1024px) {
+    width: 31.9%;
+    height: 9.78vh;
+  }
+}
+
+.projectInfo_tools_card_figma_zeplinLogo {
+  @include projectToolsCardLogo("../assets/Organizations/zeplin.png");
+  width: 52%;
+  @media (min-width: 1024px) {
+    width: 38%;
+  }
+}
+
+.projectInfo_tools_card_figma_vsCodeLogo {
+  @include projectToolsCardLogo("../assets/Organizations/vscode.webp");
+  width: 50%;
+  @media (min-width: 1024px) {
+    width: 30%;
+  }
+}
+
+.projectInfo_tools_card_figma_xcodeLogo {
+  @include projectToolsCardLogo("../assets/Organizations/xoce.webp");
+  width: 50%;
+  @media (min-width: 1024px) {
+    width: 30%;
+  }
+}
+
+.projectInfo_tools_card_figma_notionLogo {
+  @include projectToolsCardLogo("../assets/Organizations/Notion.png");
+  width: 34%;
+  height: 35%;
+  @media (min-width: 1024px) {
+    width: 30%;
+  }
+}
+
+//Laptop View:
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+  }
+  .personalInfo {
+    width: 35%;
+    background-color: $boxColor;
+    overflow-y: auto;
+  }
+  .personalInfo_profilePic {
+    overflow-y: auto;
+  }
+  .personalInfo_details {
+    overflow-y: auto;
+  }
+  .personalInfo_details_profession {
+    overflow-y: auto;
+  }
+  .personalInfo_details_profession_name {
+    overflow-y: auto;
+  }
+  .personalInfo_details_profession_position {
+    overflow-y: auto;
+  }
+  .personalInfo_details_quote {
+    overflow-y: auto;
+  }
+  .personalInfo_details_quote_text {
+    overflow-y: auto;
+  }
+  .personalInfo_details_quote_author {
+    overflow-y: auto;
+  }
+  .personalInfo_contact {
+    overflow-y: auto;
+  }
+}
